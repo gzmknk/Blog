@@ -1,0 +1,10 @@
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Service.deps.json
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Service.dll
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Service.pdb
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.dll
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.pdb
