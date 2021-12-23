@@ -439,3 +439,8 @@ C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Areas\Ident
 C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_IdentityLayout.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_Layout.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\AdminFooter\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\AdminSideNav\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\AdminTopNav\Default.cshtml.g.cs
