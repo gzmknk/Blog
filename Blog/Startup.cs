@@ -18,14 +18,18 @@ namespace Blog
         }
 
         public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDefaultServices(Configuration);
+            services.AddCustomServices();
+            services.AddCustomAuthorization();
         } 
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.AddDefaultConfiguration(env);
         }
+
     }
 }

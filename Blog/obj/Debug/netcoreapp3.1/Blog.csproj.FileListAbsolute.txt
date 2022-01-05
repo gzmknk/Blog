@@ -444,3 +444,9 @@ C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Admin
 C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\AdminFooter\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\AdminSideNav\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\AdminTopNav\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Create.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Blog\_Layout.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\bin\Debug\netcoreapp3.1\Blog.Service.dll
+C:\Users\Lenovo\source\repos\Blog\Blog\bin\Debug\netcoreapp3.1\Blog.Service.pdb
+C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Edit.cshtml.g.cs

@@ -8,3 +8,6 @@ C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Serv
 C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.dll
 C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.pdb
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Data.dll
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Data.pdb
+C:\Users\Lenovo\source\repos\Blog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.csproj.CopyComplete

@@ -8,8 +8,10 @@ namespace Blog.Data
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser> 
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
+            : base(options){
         }
+
+        public DbSet<Blok> Bloks { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }

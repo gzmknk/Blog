@@ -20,9 +20,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Blog.Data\Blog.Data.csproj" />
+    <ProjectReference Include="..\Blog.Service\Blog.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\ UserFiles\Bloks\" />
     <Folder Include="wwwroot\assets\NewFolder\" />
   </ItemGroup>
 
