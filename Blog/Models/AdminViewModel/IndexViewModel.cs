@@ -5,6 +5,6 @@ namespace Blog.Models.AdminViewModel
 {
     public class IndexViewModel
     {
-        public IEnumerable<Blok> Bloks { get; set; }
+        public IEnumerable<Post> Posts { get; set; }
     }
 }

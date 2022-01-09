@@ -11,7 +11,7 @@ namespace Blog.Data
             : base(options){
         }
 
-        public DbSet<Blok> Bloks { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

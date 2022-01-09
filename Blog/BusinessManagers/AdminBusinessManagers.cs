@@ -10,19 +10,19 @@ namespace Blog.BusinessManagers{
     
     public class AdminBusinessManagers : IAdminBusinessManager {
         private UserManager<ApplicationUser> userManager;
-        private readonly IBlokService blogService;
+        private readonly IPostService postService;
 
         public AdminBusinessManagers(
             UserManager<ApplicationUser> userManager ,
-            IBlokService blogService) {
+            IPostService blogService) {
             this.userManager = userManager;
-            this.blogService = blogService;
+            this.postService = blogService;
         }
 
         public async Task<IndexViewModel>GetAdminDashboard(ClaimsPrincipal claimsPrincipal) {
             var applicationUser = await userManager.GetUserAsync(claimsPrincipal);
             return new IndexViewModel { 
-                Bloks = blogService.GetBloks(applicationUser)
+                Posts = postService.GetPosts(applicationUser)
             };
         }
        

@@ -90,7 +90,40 @@ namespace Blog.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("Blog.Data.Models.Blok", b =>
+            modelBuilder.Entity("Blog.Data.Models.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AuthorId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PostId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("ParentId");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("Blog.Data.Models.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -104,6 +137,7 @@ namespace Blog.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Content")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -116,6 +150,7 @@ namespace Blog.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpDateOn")
@@ -126,39 +161,6 @@ namespace Blog.Data.Migrations
                     b.HasIndex("ApproverId");
 
                     b.HasIndex("CreatorId");
-
-                    b.ToTable("Bloks");
-                });
-
-            modelBuilder.Entity("Blog.Data.Models.Post", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("BlokId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreateOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("ParentId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PoserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlokId");
-
-                    b.HasIndex("ParentId");
-
-                    b.HasIndex("PoserId");
 
                     b.ToTable("Posts");
                 });
@@ -298,7 +300,22 @@ namespace Blog.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Blog.Data.Models.Blok", b =>
+            modelBuilder.Entity("Blog.Data.Models.Comment", b =>
+                {
+                    b.HasOne("Blog.Data.Models.ApplicationUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+
+                    b.HasOne("Blog.Data.Models.Comment", "Parent")
+                        .WithMany()
+                        .HasForeignKey("ParentId");
+
+                    b.HasOne("Blog.Data.Models.Post", "Post")
+                        .WithMany("Comments")
+                        .HasForeignKey("PostId");
+                });
+
+            modelBuilder.Entity("Blog.Data.Models.Post", b =>
                 {
                     b.HasOne("Blog.Data.Models.ApplicationUser", "Approver")
                         .WithMany()
@@ -307,21 +324,6 @@ namespace Blog.Data.Migrations
                     b.HasOne("Blog.Data.Models.ApplicationUser", "Creator")
                         .WithMany()
                         .HasForeignKey("CreatorId");
-                });
-
-            modelBuilder.Entity("Blog.Data.Models.Post", b =>
-                {
-                    b.HasOne("Blog.Data.Models.Blok", "Blok")
-                        .WithMany("Posts")
-                        .HasForeignKey("BlokId");
-
-                    b.HasOne("Blog.Data.Models.Post", "Parent")
-                        .WithMany()
-                        .HasForeignKey("ParentId");
-
-                    b.HasOne("Blog.Data.Models.ApplicationUser", "Poser")
-                        .WithMany()
-                        .HasForeignKey("PoserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
