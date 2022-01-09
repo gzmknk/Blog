@@ -7,4 +7,3 @@ C:\Users\Lenovo\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.As
 C:\Users\Lenovo\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.dll
 C:\Users\Lenovo\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.pdb
-C:\Users\Lenovo\source\repos\Blog\Blog.Data\obj\Debug\netcoreapp3.1\Blog.Data.csproj.AssemblyReference.cache

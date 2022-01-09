@@ -2,13 +2,16 @@
 using Blog.BusinessManagers.Interfaces;
 using Blog.Data.Models;
 using Blog.Models.BlogViewModels;
+using Blog.Models.HomeViewModels;
 using Blog.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using PagedList.Core;
 using System;
 using System.IO;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -16,21 +19,34 @@ namespace Blog.BusinessManagers
 {
     public class BlogBusinessManager : IBlogBusinessManager {
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly IBlogService blogService;
+        private readonly IBlokService blokService;
         private readonly IWebHostEnvironment webHostEnvironment;
         private readonly IAuthorizationService authorizationService;
 
         public BlogBusinessManager(
             UserManager<ApplicationUser> userManager,
-            IBlogService blogService,
+            IBlokService blogService,
             IWebHostEnvironment webHostEnvironment,
             IAuthorizationService authorizationService) {
             this.userManager = userManager;
-            this.blogService = blogService;
+            this.blokService = blogService;
             this.webHostEnvironment = webHostEnvironment;
             this.authorizationService = authorizationService;
         }
-        public async Task<Blok> CreateBlog(CreateViewModel createViewModel, ClaimsPrincipal claimsPrincipal) {
+        public IndexViewModel GetIndexViewModel(string searchString, int? page) {
+            int pageSize = 2;
+            int pageNumber = page ?? 1;
+            var bloks = blokService.GetBloks(searchString ?? string.Empty)
+                .Where(blok =>blok.Published);
+
+            return new IndexViewModel
+            {
+                Bloks = new StaticPagedList<Blok>(bloks.Skip((pageNumber- 1) * pageSize).Take(pageSize), pageNumber, pageSize, bloks.Count()),
+                SearchString = searchString,
+                PageNumber = pageNumber
+            };
+        }
+        public async Task<Blok> CreateBlok(CreateViewModel createViewModel, ClaimsPrincipal claimsPrincipal) {
             Blok blok = createViewModel.Blok;
 
             blok.Creator = await userManager.GetUserAsync(claimsPrincipal);
@@ -38,7 +54,7 @@ namespace Blog.BusinessManagers
             blok.UpDateOn = DateTime.Now;
 
 
-            blok = await blogService.Add(blok);
+            blok = await blokService.Add(blok);
 
             string webRootPath = webHostEnvironment.WebRootPath;
             string pathToImage = $@"{webRootPath}\UserFiles\Bloks\{blok.Id}\HeaderImage.jpg";
@@ -49,13 +65,13 @@ namespace Blog.BusinessManagers
                 await createViewModel.BlokHeaderImage.CopyToAsync(fileStream);
             }
 
-            return await blogService.Add(blok);
+            return await blokService.Add(blok);
            
 
         }
 
         public async Task<ActionResult<EditViewModel>> UpdateBlok(EditViewModel editViewModel, ClaimsPrincipal claimsPrincipal) {
-            var blok = blogService.GetBlok(editViewModel.Blok.Id);
+            var blok = blokService.GetBlok(editViewModel.Blok.Id);
 
             if (blok is null)
                 return new NotFoundResult();
@@ -84,7 +100,7 @@ namespace Blog.BusinessManagers
             }
             return new EditViewModel
             {
-                Blok = await blogService.Update(blok)
+                Blok = await blokService.Update(blok)
             };
 
         }
@@ -96,7 +112,7 @@ namespace Blog.BusinessManagers
                 return new BadRequestResult();
 
             var blokId = id.Value;
-            var blok = blogService.GetBlok(blokId);
+            var blok = blokService.GetBlok(blokId);
 
             if (blok is null)
                 return new NotFoundResult();

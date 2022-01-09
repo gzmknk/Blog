@@ -32,7 +32,7 @@ namespace Blog.Configuration
             serviceCollection.AddScoped<IBlogBusinessManager, BlogBusinessManager>();
             serviceCollection.AddScoped<IAdminBusinessManager, AdminBusinessManagers>();
 
-            serviceCollection.AddScoped<IBlogService, BlogService>();
+            serviceCollection.AddScoped<IBlokService, BlokService>();
         }
         public static void AddCustomAuthorization(this IServiceCollection serviceCollection)  {
             serviceCollection.AddTransient<IAuthorizationHandler, BlogAuthorizationHandler>();

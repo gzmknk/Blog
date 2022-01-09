@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YDixqnnMN5cb6nVeueMJxgAFd3BuAmy0hTYUzDE5C/E1Xd9LDfxCNGmJX4JzWzQ6C/Rqluf0IfjXGuJma5M8JA==",
+  "dgSpecHash": "xJM68HWyEkVJMkJuLgPQN1LK6ktEYq/Mks3pYe6FPoSi5N6ks/QxKg2cmDmw/tGPh5BmBssJ2fBJHRw22SOIog==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\Blog\\Blog.Service\\Blog.Service.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,8 @@
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\pagedlist.core\\1.17.4\\pagedlist.core.1.17.4.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\pagedlist.core.mvc\\3.0.0\\pagedlist.core.mvc.3.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

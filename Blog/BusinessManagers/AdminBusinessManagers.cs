@@ -10,11 +10,11 @@ namespace Blog.BusinessManagers{
     
     public class AdminBusinessManagers : IAdminBusinessManager {
         private UserManager<ApplicationUser> userManager;
-        private IBlogService blogService;
+        private readonly IBlokService blogService;
 
         public AdminBusinessManagers(
             UserManager<ApplicationUser> userManager ,
-            IBlogService blogService) {
+            IBlokService blogService) {
             this.userManager = userManager;
             this.blogService = blogService;
         }
@@ -25,6 +25,7 @@ namespace Blog.BusinessManagers{
                 Bloks = blogService.GetBloks(applicationUser)
             };
         }
+       
     }
     
  }

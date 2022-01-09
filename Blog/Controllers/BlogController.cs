@@ -32,7 +32,7 @@ namespace Blog.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Add(CreateViewModel createViewModel) {
-           await blogBusinessManager.CreateBlog(createViewModel, User);
+           await blogBusinessManager.CreateBlok(createViewModel, User);
             return RedirectToAction("Create");
         }
 

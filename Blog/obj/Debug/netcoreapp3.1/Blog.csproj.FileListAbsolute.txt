@@ -450,3 +450,5 @@ C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Blog\
 C:\Users\Lenovo\source\repos\Blog\Blog\bin\Debug\netcoreapp3.1\Blog.Service.dll
 C:\Users\Lenovo\source\repos\Blog\Blog\bin\Debug\netcoreapp3.1\Blog.Service.pdb
 C:\Users\Lenovo\source\repos\Blog\Blog\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Edit.cshtml.g.cs
+C:\Users\Lenovo\source\repos\Blog\Blog\bin\Debug\netcoreapp3.1\PagedList.Core.dll
+C:\Users\Lenovo\source\repos\Blog\Blog\bin\Debug\netcoreapp3.1\PagedList.Core.Mvc.dll

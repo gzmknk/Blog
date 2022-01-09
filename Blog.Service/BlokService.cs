@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Blog.Service
 {
-    public class BlogService : IBlogService {
+    public class BlokService : IBlokService {
         private readonly ApplicationDbContext applicationDbContext;
 
-        public BlogService(ApplicationDbContext applicationDbContext)
+        public BlokService(ApplicationDbContext applicationDbContext)
         {
             this.applicationDbContext = applicationDbContext;
         }
@@ -19,6 +19,13 @@ namespace Blog.Service
         public Blok GetBlok(int blokId)
         {
             return applicationDbContext.Bloks.FirstOrDefault(blok => blok.Id == blokId);
+        }
+        public IEnumerable<Blok> GetBloks(string searchString) {
+            return applicationDbContext.Bloks
+               .OrderByDescending(blok => blok.UpDateOn)
+               .Include(blok => blok.Creator)
+               .Include(blok => blok.Posts)
+               .Where(blok => blok.Title.Contains(searchString) || blok.Content.Contains(searchString));
         }
         public IEnumerable<Blok> GetBloks(ApplicationUser applicationUser) {
             return applicationDbContext.Bloks
